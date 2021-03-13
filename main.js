@@ -68,4 +68,17 @@ $(function(){
     }
   }
 
+  // DEFINISCO LE FUNZIONI PER MOSTRARE L'IMMAGINE CORRISPONDENTE AL BULLET CLICCATO
+  var dot = $('.fa-circle');
+  dot.click(
+    function(){
+      var img = $('img');
+      var index = dot.index($(this));
+      $('.nav').children('i').removeClass('active');
+      $(this).addClass('active');
+      img.removeClass('active');
+      img.eq(index).addClass('active');
+    }
+  )
+
 });
